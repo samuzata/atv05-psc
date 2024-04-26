@@ -1,0 +1,31 @@
+@startuml diagramaDeClasses
+
+    class Client {
+        -String CPF
+        -String name
+
+        +Bool validateIfClientExists()
+        +Void createClient()
+        +Void login()
+    }
+
+    class Item{
+        -String name
+        -Float price
+
+        +Void setName()
+        +String getName()
+        +Void setPrice()
+        +Float getPrice()
+    }
+
+    class Order{
+        -Float totalPrice
+        -List itens
+
+        +Void addItemToCart()
+        +Void addDiscountToOrder()
+        +Float getTotalPrice()
+    }
+
+@enduml
